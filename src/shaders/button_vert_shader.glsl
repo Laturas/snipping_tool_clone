@@ -1,0 +1,6 @@
+"#version 410 core\n"
+"in vec3 position;"
+"uniform float aspect; // width/height\n"
+"void main() {"
+"gl_Position = vec4(position.x / aspect, position.y, position.z, 1.0);"
+"}"
