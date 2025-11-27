@@ -1,0 +1,2 @@
+gcc -std=c2x src/linux_main.c -o snipping_tool -lglfw3 -lGL -lX11 -lpthread -ldl -lm -Wall -Werror
+./snipping_tool
