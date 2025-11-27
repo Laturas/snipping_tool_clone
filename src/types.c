@@ -14,7 +14,6 @@ typedef int i32;
 typedef long long i64;
 typedef float f32;
 typedef double f64;
-typedef long double f128;
 
 #ifndef static_assert
     #include <assert.h>
@@ -29,7 +28,6 @@ static_assert(sizeof(i32) == 4  , "Types are the wrong size from what was expect
 static_assert(sizeof(i64) == 8  , "Types are the wrong size from what was expected");
 static_assert(sizeof(f32) == 4  , "Types are the wrong size from what was expected");
 static_assert(sizeof(f64) == 8  , "Types are the wrong size from what was expected");
-static_assert(sizeof(f128) == 16, "Types are the wrong size from what was expected");
 
 #define true 1
 #define false 0
