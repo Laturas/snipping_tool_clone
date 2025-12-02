@@ -1,0 +1,2 @@
+gcc ./src/linux_main.c -I ./includes/ -L ./libs/ -lglfw3 -lopengl32 -lgdi32 -lkernel32 -static -o snipping_tool.exe
+./snipping_tool.exe

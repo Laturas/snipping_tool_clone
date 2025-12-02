@@ -18,15 +18,15 @@ typedef struct Triangle {
     Point point_3;
 } Triangle;
 
-typedef struct Rectangle {
+typedef struct ST_Rectangle {
     Triangle triangles[2];
-} Rectangle;
+} ST_Rectangle;
 
 /**
 * Position coordinate defined as the top left position
 */
-Rectangle build_rect(f32 x_position, f32 y_position, f32 width, f32 height) {
-    return (Rectangle){
+ST_Rectangle build_rect(f32 x_position, f32 y_position, f32 width, f32 height) {
+    return (ST_Rectangle){
         (Triangle){
             .point_1 = (Vertex){.x = x_position + 0.0f, .y = y_position + 0.0f, .z = 0.0f, .u = 0.0f, .v = 0.0f}, // bottom left (?)
             .point_2 = (Vertex){.x = x_position + width, .y = y_position + height, .z = 0.0f, .u = 1.0f, .v = 1.0f}, // top right

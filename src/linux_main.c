@@ -1,6 +1,5 @@
 #include "../includes/glad.c"
 #include "../includes/glfw3.h"
-#include <GL/glext.h>
 #include <assert.h>
 
 #include "snipping_tool_clone.c"
@@ -78,8 +77,8 @@ int main() {
     GLuint button_shader = compile_button_shaders();
 
     Arena vertex_arena = {0};
-    Rectangle* rect1 = arena_push(&vertex_arena, sizeof(Rectangle));
-    Rectangle* rect2 = arena_push(&vertex_arena, sizeof(Rectangle));
+    ST_Rectangle* rect1 = arena_push(&vertex_arena, sizeof(ST_Rectangle));
+    ST_Rectangle* rect2 = arena_push(&vertex_arena, sizeof(ST_Rectangle));
 
     *rect1 = build_rect(0.0f, 0.0f, 0.5f, 0.5f);
     *rect2 = build_rect(-1.0f, -0.75f, 1.0f, 0.5f);
