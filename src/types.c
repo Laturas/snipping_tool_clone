@@ -17,28 +17,28 @@ typedef double f64;
 
 #ifndef static_assert
     #include <assert.h>
+    static_assert(sizeof(u8) == 1   , "Types are the wrong size from what was expected");
+    static_assert(sizeof(u16) == 2  , "Types are the wrong size from what was expected");
+    static_assert(sizeof(u32) == 4  , "Types are the wrong size from what was expected");
+    static_assert(sizeof(u64) == 8  , "Types are the wrong size from what was expected");
+    static_assert(sizeof(i8) == 1   , "Types are the wrong size from what was expected");
+    static_assert(sizeof(i16) == 2  , "Types are the wrong size from what was expected");
+    static_assert(sizeof(i32) == 4  , "Types are the wrong size from what was expected");
+    static_assert(sizeof(i64) == 8  , "Types are the wrong size from what was expected");
+    static_assert(sizeof(f32) == 4  , "Types are the wrong size from what was expected");
+    static_assert(sizeof(f64) == 8  , "Types are the wrong size from what was expected");
 #endif
-static_assert(sizeof(u8) == 1   , "Types are the wrong size from what was expected");
-static_assert(sizeof(u16) == 2  , "Types are the wrong size from what was expected");
-static_assert(sizeof(u32) == 4  , "Types are the wrong size from what was expected");
-static_assert(sizeof(u64) == 8  , "Types are the wrong size from what was expected");
-static_assert(sizeof(i8) == 1   , "Types are the wrong size from what was expected");
-static_assert(sizeof(i16) == 2  , "Types are the wrong size from what was expected");
-static_assert(sizeof(i32) == 4  , "Types are the wrong size from what was expected");
-static_assert(sizeof(i64) == 8  , "Types are the wrong size from what was expected");
-static_assert(sizeof(f32) == 4  , "Types are the wrong size from what was expected");
-static_assert(sizeof(f64) == 8  , "Types are the wrong size from what was expected");
 
 #define true 1
 #define false 0
 #define bool char
 
-typedef struct {
+typedef struct string {
     char* str;
     u64 length;
 } String;
 
-typedef struct {
+typedef struct slice {
     u8* bytes;
     u64 length;
 } Slice;
